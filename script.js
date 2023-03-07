@@ -1,18 +1,6 @@
-const newInpt = document.querySelector("#inpt");
-const newBtn = document.querySelector("#btn");
-const newItem = document.querySelector("#item");
-
-newItem.addEventListener("click", addItem);
-
-function addItem() {
-  if (newInpt.value.trim() != "") {
-    const itemLi = document.createElement("li");
-    newItem.append(itemLi);
-
-    itemLi.textContent = newInpt.value;
-
-    newInpt.value = "";
-
-    
-  }
-}
+const inp = document.querySelector("#inputRotate");
+const div = document.querySelector(".red");
+inp.addEventListener("input", (e) => {
+  const val = e.target.value;
+  div.style.transform = `rotate(${val}deg)`;
+});
